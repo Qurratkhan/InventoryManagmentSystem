@@ -1,0 +1,42 @@
+create database dbIMS;
+
+use dbIMS;
+
+Create table tb_warehouse(
+wr_id int primary key identity(1,1),
+wr_name varchar(50),
+wr_password varchar(50),
+wr_contact varchar(50)
+);
+
+
+Create table tb_seller(
+sl_id int primary key identity(1,1),
+sl_name varchar(50),
+sl_password varchar(50),
+sl_contact varchar(50)
+);
+
+
+CREATE TABLE [dbo].[Tbl_AddProduct] (
+    [P_Id]          INT           IDENTITY (1, 1) NOT NULL,
+    [P_barcode]     VARCHAR (50)  NOT NULL,
+    [P_name]        VARCHAR (225) NOT NULL,
+    [P_quantity]    INT           NOT NULL,
+    [P_ManfDate]    DATE          NOT NULL,
+    [P_ExpDate]     DATE          NOT NULL,
+    [P_description] TEXT          NULL,
+    [P_EntryDate]   DATE          NOT NULL,
+    [P_LastEntry]   DATE          NULL,
+    PRIMARY KEY CLUSTERED ([P_Id] ASC)
+);
+
+Create table sell_product(
+s_id int primary key identity(1,1),
+s_pro_barcode varchar(50),
+s_pro_name varchar(50),
+s_pro_qty int,
+s_date Date,
+s_description varchar(100),
+s_person varchar(50)
+);
